@@ -1,0 +1,119 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	background-color: #d8384b;
+}
+.header {
+	text-align: center;
+	height: 50px;
+	/* background-color: white; */
+}
+.titulo {
+	color: #eee;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/* color: #1100ff; (Azul) */
+/* color: #ff0000; (Rojo) */
+/* color: #51ff00; (Planta) */
+
+/* Section .container__cartas   */
+.container__cartas {
+	background-color: #e6e223;
+	margin: 30px 20px;
+	border-radius: 15px;
+	padding: 0 5px;
+}
+.main {
+	width: 90%;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.carta {
+	background-color: #fff;
+	margin: 20px;
+	width: 250px;
+	height: 360px;
+	text-align: center;
+	border-radius: 15px;
+}
+.titulo__carta {
+	color: #000;
+	font-weight: bold;
+	text-transform: capitalize;
+	font-style: italic;
+	font-weight: bold;
+}
+.carta__img {
+	width: 190px;
+	height: 190px;
+	margin: 22px 0;
+	border: 2px solid red;
+	border-radius: 50%;
+	object-fit: scale-down;
+}
+
+.span_carta {
+	color: #555050;
+	font-weight: bold;
+	font-size: 1.4rem;
+	/* padding-left: 5px; */
+}
+
+.datos__carta {
+	margin-top: 25px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	/* background-color: darkolivegreen; */
+}
+.datos__carta-ataque {
+	display: flex;
+	flex-direction: column;
+	font-weight: bold;
+}
+
+.num_poke {
+	text-align: right;
+	margin-right: 27px;
+	margin-top: 10px;
+	margin-bottom: -15px;
+	font-size: 1rem;
+	font-weight: bold;
+}
+.tipo_stat {
+	font-weight: bold;
+	font-style: italic;
+}
+.numero_ataque {
+	color: green;
+	font-weight: bold;
+}
+
+.datos__carta-especial {
+	display: flex;
+	flex-direction: column;
+}
+.numero_especial {
+	color: red;
+	font-weight: bold;
+}
+
+.datos__carta-defensa {
+	display: flex;
+	flex-direction: column;
+}
+
+.numero_defensa {
+	color: blue;
+	font-weight: bold;
+}

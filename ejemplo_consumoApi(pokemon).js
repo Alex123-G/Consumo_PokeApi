@@ -22,6 +22,10 @@ const fechtData = async pokemon_id => {
 		// Obteniendo valores de las Apis
 		// LLamando a la funcion
 		pintarCard(data);
+		// console.log(data);
+		// data.types.forEach(element => {
+		// 	console.log(element);
+		// });
 	} catch (error) {
 		console.log("Ocurrio un error en la consulta");
 	}
@@ -61,6 +65,25 @@ const pintarCard = pokemon => {
 		`.numero_defensa`
 	).innerHTML = `${pokemon.stats[2].base_stat}`;
 	clone_template.querySelector(`.num_poke`).innerHTML = `N° ${pokemon.id}`;
+
+	if (pokemon.types.length < 2) {
+		pokemon.types.forEach(element => {
+			const titulo = clone_template.querySelector(`.tipos_pokemon__titulo`);
+			const span_type = document.createElement(`span`);
+			span_type.setAttribute(`class`, `tipos_pokemon`);
+			span_type.innerHTML = element.type.name;
+			titulo.appendChild(span_type);
+		});
+	} else {
+		pokemon.types.forEach(element => {
+			const titulo = clone_template.querySelector(`.tipos_pokemon__titulo`);
+			const span_type = document.createElement(`span`);
+			span_type.setAttribute(`class`, `tipos_pokemon segundo_tipo`);
+			span_type.innerHTML = element.type.name;
+			titulo.appendChild(span_type);
+		});
+	}
+
 	fragment.appendChild(clone_template);
 	main.appendChild(fragment);
 };

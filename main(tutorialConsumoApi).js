@@ -48,6 +48,7 @@ const pintarCard = pokemon => {
 	clone_template
 		.querySelector(`.carta__img`)
 		.setAttribute(`src`, `${pokemon.sprites.back_shiny}`);
+
 	fragment.appendChild(clone_template);
 	main.appendChild(fragment);
 };

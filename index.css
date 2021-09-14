@@ -117,3 +117,11 @@ body {
 	color: blue;
 	font-weight: bold;
 }
+
+.tipos_pokemon {
+	padding: 0 2px;
+}
+.segundo_tipo:first-child::after {
+	content: ",";
+	/* padding-right: 5px; */
+}

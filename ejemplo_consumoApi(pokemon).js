@@ -40,8 +40,8 @@ const pintarCard = pokemon => {
 	// Importante!! en esta ocasion se tiene que crear una copia del template ya que lo que vamos hacer es crear varias copias del template y no agregarle mas info al template;es decir tenemos que crear varias veces el template y no solo una.
 	const clone_template = template.cloneNode(true);
 	// ---------------
-	// Declarando el main donde va ir el conteneido de nuestro fragment
-	const main = document.getElementById("ejemplo");
+	// Declarando el section donde va ir el conteneido de nuestro fragment
+	const section = document.getElementById("section");
 	// ---------------
 	// Creando el fragment
 	const fragment = document.createDocumentFragment();
@@ -85,5 +85,5 @@ const pintarCard = pokemon => {
 	}
 
 	fragment.appendChild(clone_template);
-	main.appendChild(fragment);
+	section.appendChild(fragment);
 };

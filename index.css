@@ -62,7 +62,8 @@
 	top: 8px;
 	color: white;
 	pointer-events: all;
-	background-color: #1d1c1c;
+	background: none;
+	border: none;
 }
 
 .main {

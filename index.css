@@ -1,32 +1,73 @@
+/* color: #1100ff; (Azul) */
+/* color: #ff0000; (Rojo) */
+/* color: #51ff00; (Planta) */
+
 * {
 	padding: 0;
 	margin: 0;
 }
-.main {
-	background-color: #d8384b;
-}
+
 .header {
 	text-align: center;
 	height: 50px;
 	position: relative;
 	background-color: #1d1c1c;
 }
+
+.nav__header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: red;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 100%;
+	transition: left 2s;
+}
+.nav__header_visible {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: red;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	transition: left 2s;
+}
+
+.lista_header {
+	position: absolute;
+	list-style: none;
+	top: 70px;
+	right: 50px;
+	left: 50px;
+}
+
+.item-lista__header {
+	padding: 25px;
+	font-size: 2.5rem;
+}
 .titulo {
+	padding-top: 5px;
 	color: #eee;
 	font-weight: bold;
 	text-decoration: underline;
 }
-.btn_menu {
-	font-size: 2rem;
+.nav__toggle {
+	font-size: 1.8rem;
 	position: absolute;
-	right: 12px;
-	top: 5px;
+	right: 14px;
+	top: 8px;
 	color: white;
+	pointer-events: all;
+	background-color: #1d1c1c;
 }
 
-/* color: #1100ff; (Azul) */
-/* color: #ff0000; (Rojo) */
-/* color: #51ff00; (Planta) */
+.main {
+	background-color: #bb1629;
+}
 
 /* Section .container__cartas   */
 .container__cartas {
@@ -133,20 +174,20 @@
 	content: ",";
 	/* padding-right: 5px; */
 }
+
 @media screen and (max-width: 375px) {
 	.header {
 		background-color: #1d1c1c;
-		height: 42px;
+		height: 47px;
 	}
 	.titulo {
 		padding: 8px;
 		font-size: 1.6rem;
 	}
-	.btn_menu {
-		font-size: 1.7rem;
+	.nav__toggle {
+		font-size: 1.6rem;
 		position: absolute;
 		right: 10px;
-		top: 10px;
 		color: white;
 	}
 }

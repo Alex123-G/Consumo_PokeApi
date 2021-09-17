@@ -140,12 +140,12 @@ body {
 	font-weight: bold;
 }
 .carta__img {
-	width: 180px;
+	width: 200px;
 	height: 180px;
 	margin: 15px 0;
 	border: 2px solid red;
 	border-radius: 50%;
-	object-fit: scale-down;
+	/* object-fit: scale-down; */
 }
 
 .span_carta {

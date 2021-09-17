@@ -1,0 +1,268 @@
+/* color: #ff0000; (Rojo) */
+/* color: #51ff00; (Planta) */
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	background-color: #bb1629;
+}
+.main {
+	background-color: #bb1629;
+}
+
+.header {
+	font-family: "Courier New", Courier, monospace;
+	text-align: center;
+	height: 50px;
+	background-color: #1d1c1c;
+	position: sticky;
+	top: 0;
+}
+
+.nav__header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #c03a4a;
+	position: fixed;
+	top: 50px;
+	width: 100%;
+	height: 100%;
+	left: 100%;
+	transition: left 1.2s;
+}
+.nav__header_visible {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #c03a4a;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	transition: left 1.2s;
+}
+
+.lista_header {
+	position: absolute;
+	list-style: none;
+	top: 70px;
+	right: 50px;
+	left: 50px;
+}
+
+.item-lista__header {
+	padding: 25px;
+	font-size: 2.5rem;
+}
+.item-link {
+	text-decoration: underline 3px #000;
+	color: white;
+	font-weight: bold;
+	font-size: 2.4rem;
+}
+.titulo {
+	padding-top: 5px;
+	color: #eee;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.nav__toggle {
+	font-size: 1.8rem;
+	position: absolute;
+	right: 14px;
+	top: 8px;
+	color: white;
+	pointer-events: all;
+	background: none;
+	border: none;
+}
+
+.busqueda {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.name__label {
+	color: white;
+	font-size: 1.8rem;
+	margin-top: 40px;
+	margin-bottom: 5px;
+}
+
+.range_input {
+	text-align: center;
+	width: 60%;
+	padding: 5px;
+	margin: 10px;
+	font-size: 1rem;
+}
+.boton_action {
+	margin: 12px auto;
+	width: 90%;
+	padding: 5px;
+	background-color: #c03a4a;
+	border: 2px solid black;
+	color: white;
+	font-size: 1.2rem;
+}
+
+/* template .container__cartas  (NO BORRAR) */
+.container__cartas {
+	width: 90%;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.carta {
+	background-color: #fff;
+	width: 250px;
+	height: 350px;
+	text-align: center;
+	border-radius: 18px;
+	margin: 15px;
+}
+.titulo__carta {
+	color: #000;
+	text-transform: capitalize;
+	font-style: italic;
+	font-weight: bold;
+}
+.carta__img {
+	width: 180px;
+	height: 180px;
+	margin: 15px 0;
+	border: 2px solid red;
+	border-radius: 50%;
+	object-fit: scale-down;
+}
+
+.span_carta {
+	color: #555050;
+	font-weight: bold;
+	font-size: 1.2rem;
+	padding-left: 5px;
+}
+
+.datos__carta {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	/* background-color: darkolivegreen; */
+}
+.datos__carta-ataque {
+	display: flex;
+	flex-direction: column;
+	font-weight: bold;
+}
+
+.num_poke {
+	text-align: right;
+	margin-right: 27px;
+	margin-top: 10px;
+	margin-bottom: -15px;
+	font-size: 1rem;
+	font-weight: bold;
+}
+.tipo_stat {
+	font-weight: bold;
+	font-style: italic;
+}
+.numero_ataque {
+	color: green;
+	font-weight: bold;
+}
+
+.datos__carta-especial {
+	display: flex;
+	flex-direction: column;
+}
+.numero_especial {
+	color: red;
+	font-weight: bold;
+}
+
+.datos__carta-defensa {
+	display: flex;
+	flex-direction: column;
+}
+
+.numero_defensa {
+	color: blue;
+	font-weight: bold;
+}
+
+.tipos_pokemon {
+	padding: 0 2px;
+}
+
+.segundo_tipo:first-child::after {
+	content: ",";
+	/* padding-right: 5px; */
+}
+
+@media screen and (max-width: 800px) {
+	.header {
+		background-color: #1d1c1c;
+	}
+	.titulo {
+		padding: 8px;
+		font-size: 1.6rem;
+	}
+	.nav__toggle {
+		font-size: 1.6rem;
+		position: absolute;
+		right: 10px;
+		color: white;
+	}
+
+	.item-link {
+		text-decoration: underline 2px #000;
+		color: white;
+		font-size: 1.55rem;
+	}
+	.name__label {
+		color: white;
+		font-size: 1.5rem;
+		margin: 5px;
+	}
+
+	.name__input {
+		font-size: 1rem;
+		margin: 5px;
+		width: 90%;
+		padding: 5px;
+	}
+
+	.name__label {
+		color: white;
+		font-size: 1.8rem;
+		margin: 10px 0;
+	}
+	.container_button {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		margin: 0px;
+	}
+
+	.boton_action {
+		width: 94%;
+		margin: 5px auto;
+		background-color: #c03a4a;
+		border: 2px solid #360707;
+	}
+}

@@ -71,7 +71,7 @@ btn_action.addEventListener(`click`, () => {
 	const num_max = document.getElementById("num_max").value;
 
 	let val_num_min = parseInt(num_min);
-	let val_num_max = parseInt(num_max) + 1;
+	let val_num_max = parseInt(num_max) ;
 
 	if (val_num_min > val_num_max) {
 		alert("el primer número no puede ser mayor al segundo");

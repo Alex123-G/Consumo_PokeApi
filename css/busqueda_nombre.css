@@ -214,7 +214,7 @@ color: white;
 	/* padding-right: 5px; */
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
 	.header {
 		background-color: #1d1c1c;
 	}

@@ -89,30 +89,34 @@ body {
 	align-content: center;
 	justify-items: center;
 	align-items: center;
-	padding: 20px;
 }
 .name__label {
 	color: white;
 	font-size: 1.8rem;
-	margin: 15px;
+	margin: 10px 0;
 }
 
 .name__input {
 	font-size: 1rem;
-	width: 70%;
 	margin: 5px;
 	padding: 8px;
 	width: 20%;
 }
 
+.container_button {
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+}
 /* El btn cambia debido que comparte clase con el input,separar sus clases en modo responsive */
 .boton_action {
-	width: 21%;
-	margin: 10px 0;
+	width: 180px;
+	margin: 12px 4px;
 	background-color: #c03a4a;
 	border: 2px solid black;
 	color: white;
 }
+
 /* template .container__cartas   */
 .container__cartas {
 	width: 90%;
@@ -213,7 +217,7 @@ body {
 	/* padding-right: 5px; */
 }
 
-@media screen and (max-width: 475px) {
+@media screen and (max-width: 800px) {
 	.header {
 		background-color: #1d1c1c;
 	}
@@ -238,16 +242,12 @@ body {
 		font-size: 1.5rem;
 		margin: 5px;
 	}
-	.name__input {
-		font-size: 0.7rem;
-		margin: 5px;
-		padding: 8px;
-		width: 100%;
-	}
+
 	.name__input {
 		font-size: 1rem;
 		margin: 5px;
-		width: 93%;
+		width: 90%;
+		padding: 5px;
 	}
 
 	.name__label {
@@ -255,11 +255,18 @@ body {
 		font-size: 1.8rem;
 		margin: 10px 0;
 	}
-	/* El btn cambia debido que comparte clase con el input,separar sus clases en modo responsive */
-	.boton_action {
+	.container_button {
 		width: 100%;
-		margin: 10px 0;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		margin: 0px;
+	}
+
+	.boton_action {
+		width: 94%;
+		margin: 5px auto;
 		background-color: #c03a4a;
-		border: 1px solid black;
+		border: 2px solid #360707;
 	}
 }

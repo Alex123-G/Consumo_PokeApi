@@ -79,3 +79,15 @@ btn_action.addEventListener(`click`, () => {
 		callApi(value_lowe);
 	}
 });
+
+const btn_reload = document.getElementById("btn_reload");
+btn_reload.addEventListener(`click`, () => {
+	const container__cartas_remove = document.querySelector(`.container__cartas`);
+	const fragment = document.createDocumentFragment();
+	const body = document.querySelector(`.body`);
+	container__cartas_remove.remove();
+	const container__cartas_create = document.createElement("div");
+	container__cartas_create.setAttribute(`class`, `container__cartas`);
+	fragment.appendChild(container__cartas_create);
+	body.appendChild(fragment);
+});

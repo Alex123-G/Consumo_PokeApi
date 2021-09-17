@@ -72,9 +72,10 @@ const showData = pokemon => {
 const btn_action = document.getElementById(`btn_action`);
 btn_action.addEventListener(`click`, () => {
 	const value_input = document.getElementById("name").value;
+	const value_lowe = value_input.toLowerCase();
 	if (value_input == "" || value_input == " ") {
 		alert("No se permiten esos campos, por favor ingresar uno válido");
 	} else {
-		callApi(value_input);
+		callApi(value_lowe);
 	}
 });

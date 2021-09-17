@@ -40,6 +40,27 @@ const showData = pokemon => {
 
 	numero_defensa.innerHTML = `${pokemon.stats[2].base_stat}K`;
 	dato_numero_defensa.appendChild(numero_defensa);
+	// console.log(pokemon.types[0].type.name);
+	// console.log(pokemon);
+	// console.log(element.type.name);
+
+	if (pokemon.types.length < 2) {
+		pokemon.types.forEach(element => {
+			const titulo = clon_template.querySelector(`.tipos_pokemon__titulo`);
+			const span_type = document.createElement(`span`);
+			span_type.setAttribute(`class`, `tipos_pokemon `);
+			span_type.innerHTML = element.type.name;
+			titulo.appendChild(span_type);
+		});
+	} else {
+		pokemon.types.forEach(element => {
+			const titulo = clon_template.querySelector(`.tipos_pokemon__titulo`);
+			const span_type = document.createElement(`span`);
+			span_type.setAttribute(`class`, `tipos_pokemon segundo_tipo`);
+			span_type.innerHTML = element.type.name;
+			titulo.appendChild(span_type);
+		});
+	}
 
 	//
 	fragment.appendChild(clon_template);

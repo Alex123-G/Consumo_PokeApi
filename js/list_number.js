@@ -4,7 +4,6 @@ const callApi = async pokemon_id => {
 `);
 	const info = await url.json();
 	const data = await info;
-	console.log(data);
 	showData(data);
 };
 
@@ -71,12 +70,12 @@ btn_action.addEventListener(`click`, () => {
 	const num_max = document.getElementById("num_max").value;
 
 	let val_num_min = parseInt(num_min);
-	let val_num_max = parseInt(num_max) + 1;
+	let val_num_max = parseInt(num_max);
 
 	if (val_num_min > val_num_max) {
 		alert("el primer número no puede ser mayor al segundo");
 	} else {
-		for (val_num_min; val_num_min < val_num_max; val_num_min++) {
+		for (val_num_min; val_num_min <= val_num_max; val_num_min++) {
 			callApi(val_num_min);
 		}
 	}

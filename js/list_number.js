@@ -75,8 +75,12 @@ btn_action.addEventListener(`click`, () => {
 	if (val_num_min > val_num_max) {
 		alert("el primer número no puede ser mayor al segundo");
 	} else {
-		for (val_num_min; val_num_min <= val_num_max; val_num_min++) {
-			callApi(val_num_min);
-		}
+		const asincrono = async () => {
+			while (val_num_min <= val_num_max) {
+				await callApi(val_num_min);
+				val_num_min++;
+			}
+		};
+		asincrono();
 	}
 });

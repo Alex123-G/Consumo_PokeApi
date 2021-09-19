@@ -40,9 +40,6 @@ const showData = pokemon => {
 
 	numero_defensa.innerHTML = `${pokemon.stats[2].base_stat}K`;
 	dato_numero_defensa.appendChild(numero_defensa);
-	// console.log(pokemon.types[0].type.name);
-	// console.log(pokemon);
-	// console.log(element.type.name);
 
 	if (pokemon.types.length < 2) {
 		pokemon.types.forEach(element => {
@@ -80,8 +77,7 @@ btn_action.addEventListener(`click`, () => {
 	}
 });
 
-const btn_reload = document.getElementById("btn_reload");
-btn_reload.addEventListener(`click`, () => {
+const borrar = () => {
 	const container__cartas_remove = document.querySelector(`.container__cartas`);
 	const fragment = document.createDocumentFragment();
 	const body = document.querySelector(`.body`);
@@ -90,4 +86,8 @@ btn_reload.addEventListener(`click`, () => {
 	container__cartas_create.setAttribute(`class`, `container__cartas`);
 	fragment.appendChild(container__cartas_create);
 	body.appendChild(fragment);
+};
+const btn_reload = document.getElementById("btn_reload");
+btn_reload.addEventListener(`click`, () => {
+	borrar();
 });

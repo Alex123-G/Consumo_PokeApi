@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="css/busqueda_numero.css" />
 		<script src="https://kit.fontawesome.com/7e5b2d153f.js"></script>
 	</head>
-	<body>
+	<body class="body">
 		<header class="header">
 			<h1 class="titulo">Lista de Pokémon</h1>
 			<button class="nav__toggle" aria-label="Abrir menú">
@@ -30,6 +30,7 @@
 		</header>
 		<main class="main">
 			<div class="busqueda">
+	<form class="busqueda" method="POST">
 				<label for="name" class="name__label"
 					>Seleccionar un rango de pokemones que desa mostrar</label
 				>
@@ -46,9 +47,21 @@
 						class="range_input"
 						placeholder="Ingrese el número del ultimo pokémon"
 					/>
-					<button id="btn_action" class="name__input boton_action">Listar</button>
+					<div class="container_button">
+						<button type="button" id="btn_action" class="name__input boton_action">
+							Listar
+						</button>
+
+						<input
+							id="btn_reload"
+							type="reset"
+							value="Borrar"
+							class="name__input boton_action"
+						/>
+					</div>
 				</div>
 			</div>
+			</form>
 		</main>
 
 		<div class="container__cartas"></div>
@@ -79,7 +92,8 @@
 			</div>
 		</template>
 
-		<script src="js/list_number.js"></script>
+		<script type="module" src="js/list_number.js"></script>
+		<!-- <script type="module" src="js/list_name.js"></script> -->
 		<script src="efectos.js"></script>
 	</body>
 </html>

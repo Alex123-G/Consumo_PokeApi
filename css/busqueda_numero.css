@@ -23,25 +23,26 @@ body {
 .nav__header {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	background-color: #c03a4a;
+	background-color: rgb(170, 22, 37);
+	outline: 3px solid black;
 	position: fixed;
 	top: 50px;
 	width: 100%;
 	height: 100%;
 	left: 100%;
-	transition: left 1.2s;
+	transition: left 0.7s;
+	text-align: center;
 }
 .nav__header_visible {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	background-color: #c03a4a;
+	background-color: rgb(170, 22, 37);
+	outline: 3px solid black;
 	position: fixed;
-	width: 100%;
+	width: 30%;
 	height: 100%;
-	left: 0;
-	transition: left 1.2s;
+	left: 73%;
+	transition: left 0.7s;
 }
 
 .lista_header {
@@ -213,7 +214,34 @@ body {
 	/* padding-right: 5px; */
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1040px) {
+	.nav__header {
+		display: flex;
+		flex-direction: column;
+		background-color: rgb(170, 22, 37);
+		outline: 3px solid black;
+		position: fixed;
+		top: 50px;
+		width: 100%;
+		height: 100%;
+		left: 100%;
+		transition: left 0.7s;
+		text-align: center;
+	}
+	.nav__header_visible {
+		display: flex;
+		flex-direction: column;
+		background-color: rgb(170, 22, 37);
+		outline: 3px solid black;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		transition: left 0.7s;
+	}
+}
+
+@media screen and (max-width: 600px) {
 	.header {
 		background-color: #1d1c1c;
 	}
@@ -224,7 +252,7 @@ body {
 	.nav__toggle {
 		font-size: 1.6rem;
 		position: absolute;
-		right: 10px;
+		right: 0.625rem;
 		color: white;
 	}
 
@@ -263,6 +291,6 @@ body {
 		width: 94%;
 		margin: 5px auto;
 		background-color: #c03a4a;
-		border: 2px solid #360707;
+		border: 2px solid #360707d7;
 	}
 }

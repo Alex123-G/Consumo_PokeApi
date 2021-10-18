@@ -4,15 +4,21 @@
 	padding: 0;
 	margin: 0;
 }
-body {
+.body {
+	background-image: url(https://images2.alphacoders.com/116/thumb-1920-1160159.png);
 	background-color: #bb1629;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
+
 .main {
+	width: 80%;
+	margin: auto;
 	background-color: #bb1629;
 }
 
 .header {
-	font-family: "Courier New", Courier, monospace;
+	font-family: monospace;
 	text-align: center;
 	height: 50px;
 	background-color: #1d1c1c;
@@ -54,15 +60,14 @@ body {
 }
 
 .item-lista__header {
-	padding: 25px;
-	font-size: 2.5rem;
+	padding: 40px 0px;
 }
 .item-link {
-	text-decoration: underline 3px #000;
+	text-decoration: underline 2px #000;
 	color: white;
-	font-weight: bold;
-	font-size: 2.4rem;
+	font-size: 2.1em;
 }
+
 .titulo {
 	padding-top: 5px;
 	color: #eee;
@@ -116,7 +121,8 @@ body {
 
 /* template .container__cartas  (NO BORRAR) */
 .container__cartas {
-	width: 90%;
+	width: 80%;
+	/* height: 100%; */
 	margin: auto;
 	display: flex;
 	flex-direction: row;
@@ -124,6 +130,7 @@ body {
 	justify-content: center;
 	justify-items: center;
 	align-items: center;
+	background-color: #bb1629;
 }
 
 .carta {
@@ -242,6 +249,10 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+	.body {
+		background-image: url();
+		background-color: #bb1629;
+	}
 	.header {
 		background-color: #1d1c1c;
 	}
@@ -292,5 +303,9 @@ body {
 		margin: 5px auto;
 		background-color: #c03a4a;
 		border: 2px solid #360707d7;
+	}
+	.main {
+		width: 100%;
+		background-color: #bb1629;
 	}
 }

@@ -7,11 +7,15 @@
 	margin: 0;
 }
 
-body {
+.body {
+	background-image: url(https://images2.alphacoders.com/116/thumb-1920-1160159.png);
 	background-color: #bb1629;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
+
 .header {
-	font-family: "Courier New", Courier, monospace;
+	font-family: monospace;
 	text-align: center;
 	height: 50px;
 	background-color: #1d1c1c;
@@ -38,9 +42,9 @@ body {
 	background-color: rgb(170, 22, 37);
 	outline: 3px solid black;
 	position: fixed;
-	width: 30%;
+	width: 24%;
 	height: 100%;
-	left: 73%;
+	left: 77%;
 	transition: left 0.7s;
 }
 
@@ -53,14 +57,12 @@ body {
 }
 
 .item-lista__header {
-	padding: 25px;
-	font-size: 2.5rem;
+	padding: 40px 0px;
 }
 .item-link {
-	text-decoration: underline 3px #000;
+	text-decoration: underline 2px #000;
 	color: white;
-	font-weight: bold;
-	font-size: 2.4rem;
+	font-size: 2.1em;
 }
 .titulo {
 	padding-top: 5px;
@@ -80,6 +82,8 @@ body {
 }
 
 .main {
+	margin: auto;
+	width: 80%;
 	background-color: #bb1629;
 }
 
@@ -217,6 +221,10 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+	.body {
+		background-image: url();
+		background-color: #bb1629;
+	}
 	.header {
 		background-color: #1d1c1c;
 	}
@@ -267,5 +275,9 @@ body {
 		margin: 5px auto;
 		background-color: #c03a4a;
 		border: 2px solid #360707d7;
+	}
+	.main {
+		width: 100%;
+		background-color: #bb1629;
 	}
 }
